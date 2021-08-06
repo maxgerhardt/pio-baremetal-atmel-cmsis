@@ -14,9 +14,9 @@ env.Append(
   LINKFLAGS=["--specs=nosys.specs", "--specs=nano.specs"]
 )
 
-# link against libmath and libc, libgcc
+# link against libmath (implicit at the end), libc, libgcc
 env.Replace(
-   LIBS=["c", "gcc", "m"]
+   LIBS=["c", "gcc"]
 )
 
 # fix linkerscript
