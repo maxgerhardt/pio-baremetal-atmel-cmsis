@@ -12,7 +12,7 @@ A verbose compilation should show that the project's source files (`src/main.c`)
 
 Also, the linker script `sam3x8e_flash.ld` is used. To use the SRAM script, change it in `build_atmel_cmsis.py` to `sam3x8e_sram.ld` accordingly.
 
-**Pay attention** to bootloaders on the chip -- the project is setup to take over the whole flash, overwriting a potential bootloader. Make sure you know what you're doing or have SWD capable debug probe (such as a ST-Link) ready to reflash the bootloader via SWD (easily possible with the Arduino IDE) in case it is overwritten.
+**Pay attention** to bootloaders on the chip -- the project is setup to take over the whole flash (due to using Atmel-CMSIS's linker file above), overwriting a potential bootloader. Make sure you know what you're doing or have SWD capable debug probe (such as a ST-Link) ready to reflash the bootloader via SWD (easily possible with the Arduino IDE) in case it is overwritten.
 
 ```
 $ pio run -v
