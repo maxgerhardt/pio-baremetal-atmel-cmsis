@@ -16,7 +16,7 @@ env.Append(
 
 # link against libmath (implicit at the end), libc, libgcc
 env.Replace(
-   LIBS=["c", "gcc"]
+   LIBS=["c", "gcc", "m", "stdc++"]
 )
 
 # fix linkerscript

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <sam3x8e.h>
+#include <sam3.h>
 #include <component/pio.h>
 
 int main() {
