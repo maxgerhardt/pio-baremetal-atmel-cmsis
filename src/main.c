@@ -9,9 +9,8 @@
 
 int main() {
 	SystemInit(); //from system_samd21.c
-	//PA0 blinky)
-	PORT->Group[0].DIR.reg = BLINKY_LED;
-	PORT->Group[0].OUTTGL.reg = BLINKY_LED;
+	//blinky: set pin direction as output
+	PORT->Group[0].DIRSET.reg = BLINKY_LED;
 	while (1)
 	{
 		//to toggle the LED, we use the convenient OUTTGL register.
@@ -24,6 +23,7 @@ int main() {
 		//clock at default 1MHz. might need to adapt the 50k iteration number
 		//(or use SysTick).
 		//increase number significantly if bootloader has setup clock to be faster
+		//MG: Tested this and the blink rate seems circa 2 per second.
 		for (volatile long i = 0; i < 50000L; i++) { }
 	};
 	return 0;
