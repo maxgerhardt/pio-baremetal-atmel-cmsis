@@ -21,7 +21,7 @@ int main() {
 		//PORT->Group[0].OUT.reg &= ~BLINKY_LED;
 		//PORT->Group[0].OUTCLR.reg |= BLINKY_LED
 		//cpu-burning NOP delay loop. system startup code leaves
-		//clock at default 1MHz. might need to adapt the 500k iteration number
+		//clock at default 1MHz. might need to adapt the 50k iteration number
 		//(or use SysTick).
 		//increase number significantly if bootloader has setup clock to be faster
 		for (volatile long i = 0; i < 50000L; i++) { }
